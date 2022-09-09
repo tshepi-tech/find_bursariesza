@@ -1,0 +1,72 @@
+[
+    {
+        "id":"0",
+        "company":"CSIR",
+        "category":"Engineering",
+        "dueDate":"July 2022",
+        "detail":"The CSIR bursary is merit based and is aimed at full-time, unemployed students who are pursuing qualifications in areas that are deemed a priority by the CSIR",
+        "link":"https://www.zabursaries.co.za/engineering-bursaries-south-africa/csir-bursary/",
+        "schoolLevel":[{
+           "highschool":"false",
+           "undergraduate":"true",
+           "honors":"true",
+           "postgraduate":"true"
+        }]
+    },
+    {
+        "id":"1",
+        "company":"KPMG",
+        "category":"Accounting",
+        "dueDate":"All Year",
+        "detail":"KPMG is inviting students to apply for their 2 types of bursaries, for studies towards a SAICA accredited Chartered Accountant, or CAs(SA) qualification",
+        "link":"https://www.zabursaries.co.za/accounting-bursaries-south-africa/kpmg-bursary/",
+        "schoolLevel":[{
+           "highschool":"false",
+           "undergraduate":"true",
+           "honors":"true",
+           "postgraduate":"false"
+        }]
+    },
+    {
+        "id":"2",
+        "company":"Amazon Web Services",
+        "category":"Computer Science & IT",
+        "dueDate":"September 2022",
+        "detail":"Amazon is inviting students to apply for the Amazon Web Services (AWS) Skills Development Bursary, for the 2023 academic year.",
+        "link":"https://www.zabursaries.co.za/engineering-bursaries-south-africa/aws-skills-development-bursary/",
+        "schoolLevel":[{
+           "highschool":"false",
+           "undergraduate":"true",
+           "honors":"true",
+           "postgraduate":"true"
+        }]
+    },
+    {
+        "id":"3",
+        "company":"Ninety One SA",
+        "category":"Medical",
+        "dueDate":"July 2022",
+        "detail":"Ninety One is inviting students to apply for their Changeblazer bursary programme, for the 2023 academic year.",
+        "link":"https://www.zabursaries.co.za/general-bursaries-south-africa/ninety-one-bursary/",
+        "schoolLevel":[{
+           "highschool":"false",
+           "undergraduate":"true",
+           "honors":"true",
+           "postgraduate":"false"
+        }]
+    },
+    {
+        "id":"4",
+        "company":"Gallagher Foundation",
+        "category":"Education",
+        "dueDate":"August 2022",
+        "detail":"The Gallagher Foundation is inviting students to apply for their scholarship programme, for the 2023 academic year.",
+        "link":"https://www.zabursaries.co.za/general-bursaries-south-africa/gallagher-foundation-scholarship/",
+        "schoolLevel":[{
+           "highschool":"false",
+           "undergraduate":"true",
+           "honors":"false",
+           "postgraduate":"false"
+        }]
+    }
+]
