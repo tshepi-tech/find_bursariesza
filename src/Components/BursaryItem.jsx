@@ -7,7 +7,7 @@ export default function BursaryItem({item}) {
 const {company,category,dueDate,detail,link,schoolLevel}= item;
 
 
-console.log(schoolLevel.highschool)
+
 
   return (
     <div> <h1>{company}</h1>
