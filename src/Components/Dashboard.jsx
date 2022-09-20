@@ -28,12 +28,12 @@ export default function Dashboard() {
 
 //Methods
 function onSelect(event) {
-setValue(event?.target?.value);
+setValue(event.target.value);
 }
 
 const selectField = <div>
    <label htmlFor="Academic category">Academic category: </label>
-    <select name="" id="" value={value} onChange={onSelect}>
+    <select name="bursaries" id="bursaries" value={value} onChange={onSelect}>
      <option value="All">All</option>
      <option value="Engineering">Engineering</option>
      <option value="Accounting">Accounting</option>
@@ -43,13 +43,12 @@ const selectField = <div>
      </select>
      </div>
 
-
   return (
     <div>
       {selectField}
       {searchbox}
-       {setSearchField === "All" ? searchbox === "" ? (<BursaryList/>):
-   (<AcademicCategory value={value} bursaries={bursaries}/>):(<SearchList bursaries={bursaries} searchField={searchField} />)}
+        {value === "All" ? searchbox === "" ? (<BursaryList/>):
+   (<SearchList bursaries={bursaries} searchField={searchField} />):(<AcademicCategory value={value} bursaries={bursaries}/>)} 
    </div>
   )
 }
