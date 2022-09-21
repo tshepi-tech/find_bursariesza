@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import bursaries from "../Data/bursaries.json";
 import BursaryList from "./BursaryList.jsx";
 import AcademicCategory from "./AcademicCategory.jsx";
+import MonthDue from "./MonthDue.jsx"
 
 import SearchList from "./SearchList";
 
@@ -11,7 +12,8 @@ export default function Dashboard() {
 
    //Local State
    const [searchField, setSearchField] = useState("");
-   const [value, setValue] = useState("All");
+   const [academic_category, setCategory] = useState("All");
+   const [month,setMonth]=useState("All")
 
    //Methods
    const handleChange = (event) => {
@@ -27,13 +29,17 @@ export default function Dashboard() {
 />
 
 //Methods
-function onSelect(event) {
-setValue(event.target.value);
+function onSelectCategory(event) {
+setCategory(event.target.value);
 }
+function onSelectMonth(event) {
+  setMonth(event.target.value);
+  console.log(month)
+  }
 
 const selectField = <div>
    <label htmlFor="Academic category">Academic category: </label>
-    <select name="bursaries" id="bursaries" value={value} onChange={onSelect}>
+    <select name="bursaries" id="bursaries" academic_category={academic_category} onChange={onSelectCategory}>
      <option value="All">All</option>
      <option value="Engineering">Engineering</option>
      <option value="Accounting">Accounting</option>
@@ -43,13 +49,22 @@ const selectField = <div>
      </select>
      </div>
 
+const selectMonth= <div> <label htmlFor="Closing month">Closing month: </label>
+     <select name="dueMonth" id="dueMonth" month={month} onChange={onSelectMonth}>
+     <option value="All">All</option>
+     <option value="July 2022">July 2022</option>
+     <option value="August 2022">August 2022</option>
+     <option value="September 2022">September 2022</option>
+     <option value="All year">All year</option>
+     </select> 
+</div>
   return (
     <div>
       {selectField}
+      {selectMonth}
       {searchbox}
-        {value === "All" ? searchbox === "" ? (<BursaryList/>):
-   (<SearchList bursaries={bursaries} searchField={searchField} />):(<AcademicCategory value={value} bursaries={bursaries}/>)} 
+        {month === "All" ? searchbox === "" ? (<BursaryList/>):
+   (<SearchList bursaries={bursaries} searchField={searchField} />):(<MonthDue academic_category={academic_category} bursaries={bursaries} month={month}/>)} 
    </div>
-  )
-}
+  )}
 
