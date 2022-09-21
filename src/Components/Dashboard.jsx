@@ -12,7 +12,7 @@ export default function Dashboard() {
 
    //Local State
    const [searchField, setSearchField] = useState("");
-   const [academic_category, setCategory] = useState("All");
+   const [academic_category, setCategory] = useState("Engineering");
    const [month,setMonth]=useState("All")
 
    //Methods
@@ -34,7 +34,6 @@ setCategory(event.target.value);
 }
 function onSelectMonth(event) {
   setMonth(event.target.value);
-  console.log(month)
   }
 
 const selectField = <div>
@@ -58,13 +57,14 @@ const selectMonth= <div> <label htmlFor="Closing month">Closing month: </label>
      <option value="All year">All year</option>
      </select> 
 </div>
+
   return (
     <div>
       {selectField}
       {selectMonth}
       {searchbox}
-        {month === "All" ? searchbox === "" ? (<BursaryList/>):
-   (<SearchList bursaries={bursaries} searchField={searchField} />):(<MonthDue academic_category={academic_category} bursaries={bursaries} month={month}/>)} 
+       {month === "All" ? searchbox === "" ? (<BursaryList/>):
+   (<SearchList bursaries={bursaries} searchField={searchField} />):(<MonthDue bursaries={bursaries} month={month}/>)}   
    </div>
   )}
 

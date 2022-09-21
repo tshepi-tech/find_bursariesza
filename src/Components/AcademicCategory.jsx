@@ -8,7 +8,7 @@ export default function AcademicCategory({academic_category,bursaries}) {
       const category = selected_category.map((item) => (
         <BursaryItem key={item.id} item={item} />
       ));
-console.log(selected_category)
+
       return (
         <div >
           <div>{category}</div>
