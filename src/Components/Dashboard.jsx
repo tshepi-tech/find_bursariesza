@@ -11,11 +11,9 @@ export default function Dashboard() {
    const [academic_category, setCategory] = useState("All");
    const [month,setMonth]=useState("All")
 
-   //Methods
    const handleChange = (event) => {
     setSearchField(event.target.value);
   };
-
   //Properties
   const searchbox = <input
   className="search__box"
@@ -25,6 +23,7 @@ export default function Dashboard() {
 />
 
 //Methods
+
 function onSelectCategory(event) {
 setCategory(event.target.value);
 }
@@ -32,25 +31,23 @@ function onSelectMonth(event) {
   setMonth(event.target.value);
   }
 
+const categories =["All","Engineering","Accounting","Computer Science & IT","Medical","Education"];
+ const categoryOptions= categories.map((item)=><option key={item.id} value={item}>{item}</option>)
+
 const selectField = <div>
    <label htmlFor="Academic category">Academic category: </label>
     <select name="bursaries" id="bursaries" academic_category={academic_category} onChange={onSelectCategory}>
-     <option value="All">All</option>
-     <option value="Engineering">Engineering</option>
-     <option value="Accounting">Accounting</option>
-     <option value="Computer Science & IT">Computer Science & IT</option>
-     <option value="Medical">Medical</option>
-     <option value="Education">Education</option>
+    {categoryOptions}
      </select>
      </div>
 
-const selectMonth= <div> <label htmlFor="Closing month">Closing month: </label>
+const months= ["All","July 2022","August 2022","September 2022","All year"];
+const monthOptions= months.map((item)=><option key={item.id} value={item}>{item}</option>)
+
+const selectMonth= <div> 
+    <label htmlFor="Closing month">Closing month: </label>
      <select name="dueMonth" id="dueMonth" month={month} onChange={onSelectMonth}>
-     <option value="All">All</option>
-     <option value="July 2022">July 2022</option>
-     <option value="August 2022">August 2022</option>
-     <option value="September 2022">September 2022</option>
-     <option value="All year">All year</option>
+    {monthOptions}
      </select> 
 </div>
 
