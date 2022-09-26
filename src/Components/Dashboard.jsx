@@ -2,17 +2,13 @@
 import { useEffect, useState } from "react";
 //Project files
 import bursaries from "../Data/bursaries.json";
-import BursaryList from "./BursaryList.jsx";
-import AcademicCategory from "./AcademicCategory.jsx";
-import MonthDue from "./MonthDue.jsx"
-
-import SearchList from "./SearchList";
+import BursaryItem from "./BursaryItem";
 
 export default function Dashboard() {
 
    //Local State
    const [searchField, setSearchField] = useState("");
-   const [academic_category, setCategory] = useState("Engineering");
+   const [academic_category, setCategory] = useState("All");
    const [month,setMonth]=useState("All")
 
    //Methods
@@ -58,13 +54,38 @@ const selectMonth= <div> <label htmlFor="Closing month">Closing month: </label>
      </select> 
 </div>
 
+function UserClickedFilter () {
+  const filterMonth = bursaries.filter((item) => item.dueDate === `${month}`)
+  if (filterMonth.length === 0){
+    const FilteredList = bursaries.filter((item) => item.category === `${academic_category}`).filter((item) => item.category === `${academic_category}`)
+    return FilteredList
+  }else{
+    const FilteredList = filterMonth.filter((item) => item.category === `${academic_category}`)
+    return FilteredList
+  }
+}
+
+function FilterResults (){
+  const bursaryArray=UserClickedFilter()
+  if (bursaryArray.length === 0){
+    return bursaries.map((item) => (
+      <BursaryItem key={item.id} item={item} />
+      ));
+  }else{
+    return bursaryArray.map((item) => (
+          <BursaryItem key={item.id} item={item} />
+          ));
+  }
+}
+
+const bursary_list= FilterResults()
+
   return (
     <div>
       {selectField}
       {selectMonth}
       {searchbox}
-       {month === "All" ? searchbox === "" ? (<BursaryList/>):
-   (<SearchList bursaries={bursaries} searchField={searchField} />):(<MonthDue bursaries={bursaries} month={month}/>)}   
+    {bursary_list}
    </div>
   )}
 

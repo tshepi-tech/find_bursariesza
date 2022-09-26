@@ -68,5 +68,19 @@
            "honors":"false",
            "postgraduate":"false"
         }]
+    },
+    {
+        "id":"5",
+        "company":"SAICA",
+        "category":"Accounting",
+        "dueDate":"August 2022",
+        "detail":"The Gallagher Foundation is inviting students to apply for their scholarship programme, for the 2023 academic year.",
+        "link":"https://www.zabursaries.co.za/general-bursaries-south-africa/gallagher-foundation-scholarship/",
+        "schoolLevel":[{
+           "highschool":"false",
+           "undergraduate":"true",
+           "honors":"false",
+           "postgraduate":"false"
+        }]
     }
 ]
