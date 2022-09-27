@@ -12,7 +12,7 @@ export default function Navigation() {
       <ul>
         <NavLink to="Create Account">Create Account </NavLink>
         <NavLink to="Log in">Log in </NavLink>
-        <NavLink to="Forgot Password">Forgot Password</NavLink>
+        <NavLink to="Reset Password">Reset Password</NavLink>
       </ul>
     </nav>
   )
