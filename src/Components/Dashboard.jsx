@@ -1,5 +1,5 @@
 //NPM packages
-import { useEffect, useState } from "react";
+import { useState } from "react";
 //Project files
 import bursaries from "../Data/bursaries.json";
 import BursaryItem from "./BursaryItem";
