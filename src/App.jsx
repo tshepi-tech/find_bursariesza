@@ -6,10 +6,9 @@ import CreateAccount from "Pages/CreateAccount";
 import Dashboard from "Components/Dashboard";
 import LogIn from "Pages/LogIn";
 import Navigation from "Components/Navigation";
-import ResetPassword from "Pages/ResetPassword"
+import ResetPassword from "Pages/ResetPassword";
 
-export default function  App () {
-
+export default function App() {
   return (
     <div className="App">
       <Navigation />
@@ -22,4 +21,3 @@ export default function  App () {
     </div>
   );
 }
-
