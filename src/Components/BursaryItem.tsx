@@ -1,5 +1,4 @@
 //NPM packages
-import React from "react";
 
 //Project files
 import iBursaries from "interfaces/iBursaries";
