@@ -15,5 +15,5 @@ export default function Navigation() {
         <NavLink to="Reset Password">Reset Password</NavLink>
       </ul>
     </nav>
-  )
+  );
 }
