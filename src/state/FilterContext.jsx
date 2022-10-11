@@ -7,7 +7,14 @@ export function FilterProvider({ children }) {
   const [academic_category, setCategory] = useState("All");
   const [month, setMonth] = useState("All");
 
-  const value = { academic_category, month, setCategory, setMonth };
+  const value = {
+    academic_category,
+    month,
+    setCategory,
+    setMonth,
+    searchField,
+    setSearchField,
+  };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
