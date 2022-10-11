@@ -1,7 +1,5 @@
-//NPM packages
 import { useState } from "react";
 
-//Project Files
 import form from "Data/createAccountForm";
 import InputField from "Components/InputField";
 

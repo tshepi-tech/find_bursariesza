@@ -1,12 +1,8 @@
-//NPM packages
-
-//Project files
 import BursaryItem from "./BursaryItem";
 import bursaries from "../Data/bursaries.json";
 import { useFilter } from "state/FilterContext";
 
 export default function FilterBursaries() {
-  //Local state
   const { academic_category, month } = useFilter();
 
   const byMonth = bursaries.filter((item) => item.dueDate === `${month}`);

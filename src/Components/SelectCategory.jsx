@@ -1,6 +1,3 @@
-//NPM packages
-
-//Project files
 import { useFilter } from "state/FilterContext";
 
 export default function SelectCategory() {

@@ -1,8 +1,6 @@
-//NPM packages
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-//Project Files
 import form from "Data/resetPasswordForm";
 import InputField from "Components/InputField";
 

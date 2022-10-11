@@ -1,7 +1,5 @@
-//NPM packages
 import { Route, Routes } from "react-router";
 
-//Project files
 import CreateAccount from "Pages/CreateAccount";
 import Dashboard from "Components/Dashboard";
 import { FilterProvider } from "state/FilterContext";

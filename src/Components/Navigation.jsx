@@ -1,7 +1,4 @@
-//NPM packages
 import { Link, NavLink } from "react-router-dom";
-
-//Project Files
 
 export default function Navigation() {
   return (

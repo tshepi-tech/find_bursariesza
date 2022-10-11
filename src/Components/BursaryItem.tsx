@@ -1,6 +1,3 @@
-//NPM packages
-
-//Project files
 import iBursaries from "interfaces/iBursaries";
 
 interface iProps {
@@ -12,7 +9,6 @@ export default function BursaryItem({ item }: iProps) {
 
   return (
     <div>
-      {" "}
       <h1>{company}</h1>
       <p>{category}</p>
       <p>{dueDate}</p>
