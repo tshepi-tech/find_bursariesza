@@ -1,8 +1,9 @@
 import BursaryItem from "./BursaryItem";
 import bursaries from "../Data/bursaries.json";
 import { useFilter } from "state/FilterContext";
+import toBursaryItem from "./toBursaryItem";
 
-export default function FilterBursaries() {
+export default function Bursaries() {
   const { academic_category, month } = useFilter();
 
   const byMonth = bursaries.filter((item) => item.dueDate === `${month}`);
@@ -11,23 +12,17 @@ export default function FilterBursaries() {
   );
 
   if (month === "All" && academic_category === "All") {
-    return bursaries.map((item) => <BursaryItem key={item.id} item={item} />);
+    return bursaries.map(toBursaryItem);
   } else if (month === "All" && academic_category !== "All") {
     const filteredList = byCategory;
-    return filteredList.map((item) => (
-      <BursaryItem key={item.id} item={item} />
-    ));
+    return filteredList.map(toBursaryItem);
   } else if (month !== "All" && academic_category === "All") {
     const filteredList = byMonth;
-    return filteredList.map((item) => (
-      <BursaryItem key={item.id} item={item} />
-    ));
+    return filteredList.map(toBursaryItem);
   } else {
     const filteredList = byMonth.filter(
       (item) => item.category === `${academic_category}`
     );
-    return filteredList.map((item) => (
-      <BursaryItem key={item.id} item={item} />
-    ));
+    return filteredList.map(toBursaryItem);
   }
 }

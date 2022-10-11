@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import FilterBursaries from "./FilterBursaries";
+import Bursaries from "./Bursaries";
 import Search from "./Search";
 import SelectCategory from "./SelectCategory";
 import SelectMonth from "./SelectMonth";
@@ -11,7 +11,7 @@ export default function Dashboard() {
       <SelectCategory />
       <SelectMonth />
       <Search />
-      <FilterBursaries />
+      <Bursaries />
     </div>
   );
 }

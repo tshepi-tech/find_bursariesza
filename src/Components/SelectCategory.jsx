@@ -23,7 +23,6 @@ export default function SelectCategory() {
 
   return (
     <div>
-      {" "}
       <label htmlFor="Academic category">Academic category: </label>
       <select name="bursaries" id="bursaries" onChange={onSelectCategory}>
         {categoryOptions}
