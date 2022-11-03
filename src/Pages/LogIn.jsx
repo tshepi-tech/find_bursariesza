@@ -8,6 +8,13 @@ export default function LogIn() {
 	const [password, setPassword] = useState("123456");
 	const [students, setStudents] = useState([]);
 
+	function handleEmail(event) {
+		setEmail(event.target.value);
+	}
+	function handlePassword(event) {
+		setPassword(event.target.value);
+	}
+
 	function onLogin() {
 		console.log("loggin in ...");
 	}
@@ -15,8 +22,16 @@ export default function LogIn() {
 		<div>
 			{" "}
 			<form onSubmit={onLogin}>
-				<InputField setup={form.email} state={[email, setEmail]} />
-				<InputField setup={form.password} state={[password, setPassword]} />
+				<InputField
+					setup={form.email}
+					value={email}
+					handleChange={handleEmail}
+				/>
+				<InputField
+					setup={form.password}
+					value={password}
+					handleChange={handlePassword}
+				/>
 				<button>Log In</button>
 			</form>
 		</div>

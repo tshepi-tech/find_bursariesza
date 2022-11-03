@@ -1,17 +1,16 @@
-export default function InputField({ setup, state }) {
-  const { label, placeholder, type, required } = setup;
-  const [getter, setter] = state;
+export default function InputField({ setup, handleChange, value }) {
+	const { label, placeholder, type, required } = setup;
 
-  return (
-    <label className="input-field">
-      {label}
-      <input
-        type={type}
-        placeholder={placeholder}
-        value={getter}
-        onChange={(event) => setter(event.target.value)}
-        required={required}
-      />
-    </label>
-  );
+	return (
+		<label className="input-field">
+			{label}
+			<input
+				type={type}
+				placeholder={placeholder}
+				value={value}
+				onChange={handleChange}
+				required={required}
+			/>
+		</label>
+	);
 }

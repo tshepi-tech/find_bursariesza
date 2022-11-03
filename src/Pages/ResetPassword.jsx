@@ -7,6 +7,10 @@ import InputField from "Components/InputField";
 export default function ResetPassword() {
 	const [email, setEmail] = useState("tshepi.lehutjo@gmail.com");
 
+	function handlePassword(event) {
+		setPassword(event.target.value);
+	}
+
 	function onReset() {
 		console.log("resetting password");
 	}
@@ -19,7 +23,11 @@ export default function ResetPassword() {
 				sent to that email{" "}
 			</p>
 			<form onSubmit={onReset}>
-				<InputField setup={form.email} state={[email, setEmail]} />
+				<InputField
+					setup={form.email}
+					value={email}
+					handleChange={handlePassword}
+				/>
 				<button>Submit</button>
 			</form>
 			<p>
