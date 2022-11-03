@@ -7,8 +7,8 @@ import InputField from "Components/InputField";
 export default function ResetPassword() {
 	const [email, setEmail] = useState("tshepi.lehutjo@gmail.com");
 
-	function handlePassword(event) {
-		setPassword(event.target.value);
+	function handleEmail(event) {
+		setEmail(event.target.value);
 	}
 
 	function onReset() {
