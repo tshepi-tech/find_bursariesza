@@ -2,7 +2,7 @@ import BursaryItem from "./BursaryItem";
 import bursaries from "../Data/bursaries.json";
 import { useFilter } from "state/FilterContext";
 
-export default function FilterBursaries() {
+export default function Bursaries() {
 	//Local state
 	const { academic_category, month } = useFilter();
 
